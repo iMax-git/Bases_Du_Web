@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript</title>
+    <link rel="styleSheet" href="css/styles.css" type="text/css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Exercices javascript - Suite</h1>
+    </header>
+    <article class="introduction">
+        <h2>Introduction</h2>
+        <p>Voici une série d'exercices d'initiation à JavaScript.</p>
+        <p>Chaque exercice doit traiter des éléments html compris dans cette page web.</p>
+        <p>Créez un dossier <em>js</em>. Dans celui-ci, créez un fichier javascript nommé <em>comportements.js</em> que vous lierez à cette page web. Vous penserez à utiliser le mot clef <em>defer</em>.</p>
+        <p>Vous structurerez le programme principal et y placerez des commentaires afin que l'on indentifie clairement les instructions de chaque exercice.</p>
+    </article>
+
+
+
+    <article>
+        <h2>Manipuler les éléments du DOM</h2>
+        <section class="cours">
+            <h3>Vous devrez savoir</h3>
+            <h4>Supprimer un élément</h4>
+            <p>Pour supprimer un élément, on lui applique la méthode <em>remove</em>.</p>
+            <p>Par exemple, pour supprimer une balise <em>img</em> dans une balise <em>figure</em> :</p>
+            <code>
+          <pre>
+          // Sélection de l'élément à supprimer
+          const image = document.querySelector('#laOuJeVeux figure img') ;
+          // Suppression
+          image.remove() ;
+          </pre>
+      </code>
+        </section>
+        <section class="exercices" id="ex1">
+            <h3>Exercice 1</h3>
+            <p>Voici une liste. Quand on clique sur <span class="control" id="boutonSupprimerEx1">Supprimer</span>, le premier élément de la liste doit être supprimé.</p>
+            <ul>
+                <li>Premier</li>
+                <li>Deuxième</li>
+                <li>Troisième</li>
+                <li>Dernier</li>
+            </ul>
+        </section>
+
+
+    </article>
+    <section class="cours">
+        <h3>Vous devrez savoir</h3>
+        <h4>Créer et insérer un élément</h4>
+        <p>La méthode <em>document.createElement</em> permet de créer un nouvel élément à insérer dans la page web.</p>
+        <p>La méthode <em>append</em> permet d'ajouter un élément à l'intérieur d'un autre, en dernière position.</p>
+        <p>Par exemple, pour créer une balise <em>img</em> et l'insérer à la fin d'un paragraphe :</p>
+        <code>
+          <pre>
+          // Création de l'élément
+          const nouvelleImage = document.createElement('img') ;
+          // Sélection du lieu d'insertion
+          const paragrapheDInsertion = document.querySelector('#laOuJeVeux p') ;
+          // Insertion
+          pere.append(nouvelleImage) ;
+          </pre>
+      </code>
+
+
+    </section>
+    <section class="exercices" id="ex2">
+        <h3>Exercice 2</h3>
+        <p>Quand on clique sur <span class="control" id="boutonDeplacerEx2">Déplacer</span>, le premier élément de la liste doit passer en dernière position.</p>
+        <p>Quand on clique sur <span class="control" id="boutonCreerEx2">Créer</span>, le programme doit créer un nouvel <em>li</em> contenant le texte "nouveau" et l'insérer en dernière position.</p>
+
+        <ul>
+            <li>Premier</li>
+            <li>Deuxième</li>
+            <li>Troisième</li>
+            <li>Dernier</li>
+        </ul>
+    </section>
+
+    <h2>Gérer des évènements et manipuler
+        <legend></legend> DOM</h2>
+    <p>Vous devez savoir :</p>
+    <ul>
+        <li>Relier un élément, un évènement le concernant et un gestionnaire d'évènement chargé de traiter l'évènement en question. Par exemple <code>document.getElementById("m").addEventListener("click",traiter);</code> indique que lorsqu'on clique sur l'élément
+            dont l'id est <em>m</em>, il faut exécuter la fonction <em>traiter</em>.</li>
+    </ul>
+    <section class="exercices" id="ex3">
+        <h3>Exercice 3 : masquage d'un élément</h3>
+        <p>La feuille de style de cette page définit la classe "invisible", qui permet de masquer un élément.</p>
+        <p>On veut obtenir le comportement suivant : lorsqu'on clique sur la liste, son premier élément devient invisible, il réapparaît lorsqu'on clique sur<span class="control reaf">tout réafficher</span>.</p>
+        <ul id="ingredients">
+            <li>Salade</li>
+            <li>Tomate</li>
+            <li>Oignons</li>
+            <li>Sauce blanche</li>
+        </ul>
+    </section>
+
+    <section class="cours">
+        <h3>Vous devrez savoir</h3>
+        <h4>Sélectionner un ensemble d'éléments</h4>
+        <p><em>document.querySelector('main h2')</em> permet de sélectionner uniquement le <strong>premier</strong> <em>h2</em> du <em>main</em>. </p>
+        <p>Avec <em>document.querySelectorAll('main h2')</em> on sélectionne <strong>tous</strong> les <em>h2</em> du <em>main</em>.</p>
+        <p>Si on veut agir sur chaque élément de cet ensemble, il faudra utiliser une boucle de parcours</p>
+        <p>par exemple :</p>
+        <code>
+            <pre>
+            // Création de l'ensemble des titres de niveau 2
+            const lesTitreH2 = document.querySelectorAll('main h2') ;
+            // Parcous de cet ensemble :
+            //  Pour chaque élément unTitre de cet ensemble, je l'affiche dans la console
+            lesTitreH2.forEach(unTitre => { console.log(unTitre) });
+            </pre>
+        </code>
+        <h4>Manipuler l'élément qui a subi l'événement</h4>
+        <p>Dans un sous-programme de gestion d'un évènement, on a souvent besoin de faire référence à l'élément qui a reçu l'évènement. </p>
+        <p>Le mot-clé <em>this</em> permet de désigner l'élément cible de l'événement que l'on est en train de traiter.</p>
+        <p>Par exemple <code>this.classList.add('penche') ;</code> permet de donner la classe "penche" à l'élement qui a reçu l'événement.
+        </p>
+
+    </section>
+    <section class="exercices" id="ex4">
+        <h3>Exercice 4 : masquage de l'élément récepteur de l'évènement</h3>
+        <p>Lorsqu'on clique sur un élément de la liste, on veut masquer cet élément, et réafficher tous les éléments lorsqu'on clique sur<span class="control reaf">tout réafficher</span>.</p>
+        <p>Dans un premier temps, cherchez à afficher "Vous avez cliqué" dans la console lorsque l'on clique sur un <em>li</em>.</p>
+        <p>Sélectionnez tous les <em>li</em>, créez une boucle de parcours avec la fonction <em>foreach</em>, et placez un écouteur d'événement sur chaque <em>li</em>.</p>
+        <p>Créez la fonction de gestion de l'événement, faites-lui afficher "Vous avez cliqué".</p>
+        <p>Dans un second temps, faite en sorte que la fonction de gestion de l'événement affiche le <em>li</em> concerné par le clic.</p>
+        <p>Dans un gestionnaire d'événement, l'élément concerné par l'événement peut être désigné par <em>this</em>.</p>
+        <p>Pour finir, donnez la classe "invisible" à l'élément qui a été cliqué.</p>
+        <ul id="lesPrenoms">
+            <li>Jenny</li>
+            <li>Paul</li>
+            <li>Léa</li>
+            <li>Bob</li>
+        </ul>
+    </section>
+
+    <section class="exercices" id="ex5">
+        <h3>Exercice 5 : déplacement de l'élément ciblé, parmi des frères</h3>
+        <p>Cliquer sur un élément de la liste provoque la modification suivante : l'élément est déplacé en dernière position.</p>
+        <ul>
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+            <li>Element 4</li>
+        </ul>
+    </section>
+
+    <section class="exercices" id="ex6">
+        <h3>Exercice 6 : masquage d'un ensemble d'éléments</h3>
+        <p>Lorsqu'on clique sur un élément, masquer tous ceux qui appartiennent à la même classe, réafficher tous les éléments lorsqu'on clique sur<span class="control reaf">tout réafficher</span>.</p>
+        <p>Vous chercherez à placer dans une variable la classe de l'élément qui a été cliqué.</p>
+        <p>Vous utiliserez cette variable pour construire le sélecteur à fournir à <em>document.querySelectorAll</em> pour atteindre tous les éléments possédant cette classe ...</p>
+        <ul id="lettresEtNombres">
+            <li class="texte">A</li>
+            <li class="texte">B</li>
+            <li class="nombre">56</li>
+            <li class="nombre">1024</li>
+            <li class="texte">C</li>
+            <li class="nombre">243</li>
+        </ul>
+    </section>
+
+
+
+</body>
+
+</html>
