@@ -1,0 +1,193 @@
+/******** Mon reset **********/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    padding: 0 0rem;
+    background-color: #DDD;
+}
+
+
+/***** Classe génériques ********************************/
+
+.inverse {
+    background-color: #666;
+    color: darkgrey;
+}
+
+.lienSecondaire {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lienSecondaire:hover {
+    background-color: #ddd;
+}
+
+
+/******** HEADER ****************/
+
+.header-principal {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header-principalr h2 {
+    font-size: 1.3rem;
+}
+
+
+/**** MENU **************************************/
+
+.menu-principal {
+    margin: 1rem 1rem 0 1rem;
+    padding-left: 10px;
+}
+
+.menu-principal li {
+    display: inline-block;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+    transition: 0.5s ease;
+    transition-property: background, color;
+    border-radius: 3px 3px 0 0;
+}
+
+.menu-principal a:hover {
+    background-color: darkgrey;
+}
+
+.menu-principal a.actuel {
+    background-color: #666;
+    color: #DDD;
+}
+
+
+/********* Positionnement du contenu principal ***/
+
+main {
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+
+/*********** Articles **************************************************/
+
+main {
+    min-width: 800px;
+    line-height: 1.3rem;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        width: 100%;
+        min-width: 200px;
+    }
+}
+
+main em {
+    font-style: italic;
+}
+
+article {
+    padding: 0 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    /*overflow: hidden ;*/
+}
+
+article h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+article h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0rem;
+}
+
+article p {
+    padding: 0.5rem 0 1rem 0;
+}
+
+article ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 0rem;
+}
+
+article ul li {
+    padding-bottom: 0.5rem;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 3rem;
+}
+
+ol li {
+    line-height: 2;
+}
+
+
+/**************** Footer ************************************/
+
+.footer-principal {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0 15px 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.footer-principal p {
+    padding: 5px 0 0 0;
+    display: inline-block;
+}
+
+
+/**** responsive ********/
+
+@media screen and (min-width: 800px) {
+    main {
+        padding: 0 1rem;
+    }
+}

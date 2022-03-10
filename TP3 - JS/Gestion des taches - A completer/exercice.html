@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TP JS n°3</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/decors.css">
+    <link rel="stylesheet" href="css/taches.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="js/gerer-taches.js" defer></script>
+</head>
+
+<body>
+    <header class="header-principal">
+        <h1>Bases du web</h1>
+        <h2>Programmation Javascript</h2>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="index.html">Consigne</a></li>
+                <li><a href="exercice.html" class="actuel">Exercice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="taches">
+            <div class="tache tache--saisie">
+                <header class="tache__titre">
+                    Nouvelle tâche
+                </header>
+                <form class="tache__formulaire">
+                    <label for="quoi">Quoi ?</label>
+                    <input type="text" class="tache__quoi">
+                    <label for="qui">Qui ?</label>
+                    <input type="text" class="tache__qui">
+                    <input type="submit" class="tache__btn tache__btn--validation-formulaire" value="OK">
+                </form>
+            </div>
+            <li class="tache tache--invisible">
+                <header class="tache__controles">
+                    <span class="tache__btn tache__btn--validation">V</span>
+                    <span class="tache__btn tache__btn--suppression">X</span>
+                </header>
+                <section class="tache__principal">
+                    <p class="tache__quoi">Quoi</p>
+                </section>
+                <footer>
+                    <p class="tache__qui">Qui</p>
+                </footer>
+            </li>
+        </article>
+        <article>
+
+            <h3>Tâches à effectuer <span class="effectif"></span></h3>
+            <ul class="taches a_effectuer">
+                <li class="tache">
+                    <header class="tache__controles">
+                        <span class="tache__btn tache__btn--validation">V</span>
+                        <span class="tache__btn tache__btn--suppression">X</span>
+                    </header>
+                    <section class="tache__principal">
+                        <p class="tache__quoi">Réparer la moto</p>
+                    </section>
+                    <footer>
+                        <p class="tache__qui">Gwendoline</p>
+                    </footer>
+                </li>
+                <li class="tache">
+                    <header class="tache__controles">
+                        <span class="tache__btn tache__btn--validation">V</span>
+                        <span class="tache__btn tache__btn--suppression">X</span>
+                    </header>
+                    <section class="tache__principal">
+                        <p class="tache__quoi">Faire du sport</p>
+                    </section>
+                    <footer>
+                        <p class="tache__qui">Bob</p>
+                    </footer>
+                </li>
+
+                <li class="tache">
+                    <header class="tache__controles">
+                        <span class="tache__btn tache__btn--validation">V</span>
+                        <span class="tache__btn tache__btn--suppression">X</span>
+                    </header>
+                    <section class="tache__principal">
+                        <p class="tache__quoi">Remplir le frigo</p>
+                    </section>
+                    <footer>
+                        <p class="tache__qui">Tanguy</p>
+                    </footer>
+                </li>
+
+
+            </ul>
+
+        </article>
+
+        <article>
+
+            <h3>Tâches accomplies <span class="effectif"></span></h3>
+            <ul class="taches accomplies">
+                <li class="tache tache--accomplie">
+                    <header class="tache__controles">
+                        <span class="tache__btn tache__btn--validation">V</span>
+                        <span class="tache__btn tache__btn--suppression">X</span>
+                    </header>
+                    <section class="tache__principal">
+                        <p class="tache__quoi">Réserver l'escape game</p>
+                    </section>
+                    <footer>
+                        <p class="tache__qui">Gwendoline</p>
+                    </footer>
+                </li>
+                <li class="tache  tache--accomplie">
+                    <header class="tache__controles">
+                        <span class="tache__btn tache__btn--validation">V</span>
+                        <span class="tache__btn tache__btn--suppression">X</span>
+                    </header>
+                    <section class="tache__principal">
+                        <p class="tache__quoi">Trouver un stage</p>
+                    </section>
+                    <footer>
+                        <p class="tache__qui">Sammy</p>
+                    </footer>
+                </li>
+
+            </ul>
+
+        </article>
+
+    </main>
+    <section class="info"></section>
+    <footer class="footer-principal">
+        <p>Mineure Informatique</p>
+    </footer>
+
+
+</body>
+
+</html>
