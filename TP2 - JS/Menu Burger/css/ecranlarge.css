@@ -1,0 +1,73 @@
+/* Responsive MQ */
+
+@media all and (min-width:800px) {
+    #fermeture_menu,
+    #ouverture_menu {
+        display: none;
+    }
+    .header-principal {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    h1 {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+    .menu-principal {
+        position: static;
+        height: auto;
+        width: 100%;
+        left: 0;
+        top: 0;
+        font-size: 1.5rem;
+        background-color: rgba(60, 174, 163, 095);
+        padding: 0 1rem;
+    }
+    .menu-principal ul {
+        display: flex;
+    }
+    .menu-principal ul li {
+        transition: 0.5s all ease;
+        border: none;
+        padding: 1rem;
+    }
+    .menu-principal ul li:hover {
+        border-color: #ED5153;
+        background-color: #3A3838;
+    }
+    .menu-principal {
+        border-width: 0px 0px 4px 0px;
+        border-color: #1E1E1E;
+    }
+    h1 {
+        margin-left: 50px;
+    }
+    .footer-principal {
+        border-width: 4px 0px 0px 0px;
+        border-color: #1E1E1E;
+    }
+    main {
+        padding: 4rem;
+    }
+    main h2 {
+        /*        font-size: 5rem;   */
+        top: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .service {
+        padding: 1rem 2rem 2rem 2rem;
+        border-radius: 5px;
+    }
+    .service figure {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .service img {
+        flex: 0 0 20%
+    }
+    .service figcaption {
+        flex: 0 0 70%
+    }
+}
