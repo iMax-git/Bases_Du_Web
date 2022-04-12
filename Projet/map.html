@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Yellow - Carte</title>
+    
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <script src="js/carte.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <p>Yellow</p>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">acceuil</a>
+            <a href="#">se reperer</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cartographie du réseau</h1>
+        <div class="mapcontainer">
+            <div id="map">
+                <div id='map'></div>
+            </div>
+        </div>
+        
+    </main>
+    <nav class="phone-nav">
+        <a href="#">
+            <span class="material-icons">
+                home
+            </span>
+        </a>
+        <a href="#">
+            <span class="material-icons">
+                location_on
+            </span>
+        </a>
+    </nav>
+    <footer>
+        <p>
+            <span class="material-icons">
+                info
+            </span>
+            Site réalisé par DIARD Titouan pour un projet dans la matière de développement web.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Chewy', cursive;
+}
+
+main .first-article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 10px; */
+    padding: 10vh 0;
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 1px;
+}
+
+.first-article div{
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    height: 25vh;
+    background-color: #DDDDDD;
+    border-radius: 100vh;
+}
+
+.first-article div span{
+    font-size: 20vh;
+}
+
+.second-article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.second-article div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0;
+}
+
+.second-article div p {
+    text-align: center;
+}
+
+.second-article div span{
+    background-color: #DDDDDD;
+    border-radius: 100vh;
+    padding: 10px;
+    font-size: 15vh;
+    margin: 10% 0;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    main .first-article{
+        font-size: 10vh;
+        justify-content: space-evenly;
+        margin: 12vh 0;
+    }
+
+    main .first-article div{
+        flex: 0 0 20%;
+    }
+
+    main .second-article{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 3vh;
+    }
+
+    main .second-article div{
+        
+        flex: 0 0 25%;
+    }
+
+
+
+}
