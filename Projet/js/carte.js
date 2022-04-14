@@ -93,7 +93,7 @@ function loadMap() {
             if (e.features[0].properties.description === "") {
                 description = "Arret de bus : "+ e.features[0].properties.nom +
                     "<br>" +
-                    "Description: Aucune description" ;
+                    "Description:_''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' Aucune description" ;
             } else {
                 description = "Arret de bus : " + e.features[0].properties.nom +
                     "<br>" +

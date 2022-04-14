@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Yellow - Recherche</title>
+    
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.css' rel='stylesheet' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/search.css" rel="stylesheet">
+    <script src="js/search.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <p>Yellow</p>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">acceuil</a>
+            <a href="#">se reperer</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Faire une Recherche</h1>
+        <div class="filter-container">
+            <div>
+                <label for="stop_name"> Recherche par nom </label>
+                <input type="text" id="stop_name" class="stop_name" placeholder="Nom de la station" name="stop_name">
+                
+            </div>
+            <div>
+                <label for="type_select"> Type de Recherche </label>
+                <select name="type_select">
+                    <option value="">Toutes les lignes</option>
+                    <option value="bus">Arret de bus</option>
+                    <option value="velo">Station de vélo</option>
+                </select>
+            </div>
+        </div>
+        <article>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+            <div class="info-container" id="info_liste">
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <span class="material-icons">
+                                directions_bus
+                            </span>
+                        </div>
+                        <div class="info">
+
+                            <p>Nom de l'arret: XXXXXXXXXXXXXXXX</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <span class="material-icons">
+                                pedal_bike
+                            </span>     
+                        </div>
+                        <div class="info">
+                            <p>Nom de la station: XXXXXXXXXXXXXXXX</p>
+                            <p>Velo disponible: 1/8</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <nav class="phone-nav">
+        <a href="#">
+            <span class="material-icons">
+                home
+            </span>
+        </a>
+        <a href="#">
+            <span class="material-icons">
+                location_on
+            </span>
+        </a>
+    </nav>
+    <footer>
+        <p>
+            <span class="material-icons">
+                info
+            </span>
+            Site réalisé par DIARD Titouan pour un projet dans la matière de développement web.
+        </p>
+    </footer>
+</body>
+</html>
