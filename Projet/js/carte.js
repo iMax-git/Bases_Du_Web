@@ -2,7 +2,7 @@ console.log('Exécution du programme carte.js');
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaW1heGxhcGluY2UiLCJhIjoiY2wxcWJhajl5MWo3aDNibzNwcXI2aGlrcyJ9.gR-uyStyPxznhXCo-DL7rA';
-
+const loading_screen = document.getElementById("loading_screen");
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
@@ -11,14 +11,15 @@ var map = new mapboxgl.Map({
 });
 points = []
 velo = []
+const url_ArretdeBus_Limited = "https://api.agglo-larochelle.fr/production/opendata/api/records/1.0/search/dataset=transport_yelo___gtfs_stop_des_bus&rows=600&facet=stop_id"
 const url_ArretdeBus = "https://opendata.agglo-larochelle.fr/api/records/2.0/downloadfile/format=json&resource_id=efc3e9e8-4c12-4aac-ba9d-fa1c93c2445c";
 const url_emplacementVelo = "https://opendata.agglo-larochelle.fr/api/records/2.0/downloadfile/format=json&resource_id=1f124bea-d55f-457f-9eab-b7877d803435"
 
 
 
-const ArretDeBus = axios.get(url_ArretdeBus).then(
+const ArretDeBus = axios.get(url_ArretdeBus_Limited).then(
     function(response) {
-        var data = response.data;
+        var data = response.data.records;
         console.log(data);
         points = [];
         data.forEach(function(element) {
@@ -164,5 +165,7 @@ function loadMap() {
 
 
     });
+
+    loading_screen.style.display = "none";
 
 }

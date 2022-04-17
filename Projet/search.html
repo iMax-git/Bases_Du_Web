@@ -29,18 +29,27 @@
 
 </head>
 <body>
+    <div class="loading" id="loading_screen">
+        <div class="loadcircle">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <header>
         <div>
             <p>Yellow</p>
         </div>
         <nav class="desktop-nav">
             <a href="index.html">acceuil</a>
-            <a href="#">se reperer</a>
+            <a href="map.html">se reperer</a>
+            <a href="#">recherche</a>
         </nav>
     </header>
     <main>
         <h1>Faire une Recherche</h1>
-        <div class="filter-container">
+        <form class="filter-container" id="form">
             <div>
                 <label for="stop_name"> Recherche par nom </label>
                 <input type="text" id="stop_name" class="stop_name" placeholder="Nom de la station" name="stop_name">
@@ -48,20 +57,21 @@
             </div>
             <div>
                 <label for="type_select"> Type de Recherche </label>
-                <select name="type_select">
+                <select name="type_select" id="type">
                     <option value="">Toutes les lignes</option>
                     <option value="bus">Arret de bus</option>
                     <option value="velo">Station de vélo</option>
                 </select>
             </div>
-        </div>
+            <input type="submit" value="Rechercher" id="submit"></input>
+        </form>
         <article>
             <div class="map-container">
                 <div id="map"></div>
             </div>
             <div class="info-container" id="info_liste">
                 <ul>
-                    <li>
+                    <!-- <li>
                         <div class="icon">
                             <span class="material-icons">
                                 directions_bus
@@ -83,19 +93,24 @@
                             <p>Velo disponible: 1/8</p>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </article>
     </main>
     <nav class="phone-nav">
-        <a href="#">
+        <a href="index.html">
             <span class="material-icons">
                 home
             </span>
         </a>
-        <a href="#">
+        <a href="map.html">
             <span class="material-icons">
                 location_on
+            </span>
+        </a>
+        <a href="#">
+            <span class="material-icons">
+                explore
             </span>
         </a>
     </nav>
